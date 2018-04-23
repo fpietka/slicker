@@ -11,7 +11,7 @@ import ast
 import difflib
 import os
 
-from isort import SortImports
+import isort
 
 from . import util
 from . import khodemod
@@ -79,7 +79,7 @@ def import_sort_suggestor(project_root):
         # one diff to add in the right place, unless there is additional
         # sorting to do.
         # Now call out to isort to do the import-sorting
-        fixed_body = SortImports(file_contents=body).output
+        fixed_body = isort.SortImports(file_contents=body).output
 
         if fixed_body == body:
             return
