@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+from __future__ import absolute_import, print_function
 
 import os
 import unittest
@@ -14,7 +14,7 @@ class RootTest(base.TestBase):
     def test_root(self):
         self.copy_file('simple_in.py')
         with open(self.join('foo.py'), 'w') as f:
-            print >>f, "def some_function(): return 4"
+            print("def some_function(): return 4", file=f)
 
         slicker.make_fixes(['foo.some_function'], 'bar.new_name',
                            project_root=self.tmpdir)

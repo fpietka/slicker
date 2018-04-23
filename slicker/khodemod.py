@@ -130,7 +130,7 @@ class FatalError(RuntimeError):
 
 def emit(txt):
     """This is a function so tests can override it."""
-    print txt
+    print(txt)
 
 
 def extensions_path_filter(extensions, include_extensionless=False):

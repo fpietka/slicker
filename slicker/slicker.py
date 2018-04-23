@@ -671,7 +671,7 @@ def make_fixes(old_fullnames, new_fullname, import_alias=None,
     """
     def log(msg):
         if verbose:
-            print msg
+            print(msg)
 
     # TODO(benkraft): Support other khodemod frontends.
     frontend = khodemod.AcceptingFrontend(verbose=verbose)
